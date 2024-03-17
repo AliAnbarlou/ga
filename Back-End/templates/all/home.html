@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}MV - All Musics{% endblock title %}
+{% block content %}
+    {% for i in postsindb %}
+        <h4><a href="{% url 'det' i.id%}">{{i.title}}</a></h4> <!--چیزی که تو url ست کردیم-->
+        <img src="{{i.image.url}}" alt="img" width="120px" height="120px">
+        <hr>
+    {% endfor %}
+<!--
+    {% for tag_info in tags_with_posts %}
+    <h2>{{ tag_info.tag.name }}</h2>
+    <ul>
+        {% for post in tag_info.posts %}
+            <li>{{ post.title }}</li>
+        {% endfor %}
+    </ul>
+    {% empty %}
+        <p>No tags found.</p>
+    {% endfor %}
+
+{% endblock content %}-->

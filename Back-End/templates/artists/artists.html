@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Artist Details{% endblock title %}
+{% block content %}
+<h1>{{ artist.username }}'s Music</h1>
+{% for music in artist_music %}
+<div>
+    <h2>{{ music.title }}</h2>
+    <p>{{ music.full_description }}</p>
+    <p>Artist: {{ music.artist.username }}</p>
+    <img src="{{ music.image.url }}" alt="Image">
+    <audio controls>
+        <source src="{{ music.audio_file.url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+{% endfor %}
+{% endblock content %}

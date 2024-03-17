@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}MV{% endblock title %}
+{% block content %}
+<h1>Music Details</h1>
+        <div>
+            <h2>{{ postsindb.title }}</h2>
+            <p>{{ postsindb.full_description }}</p>
+            <!--<p>Artist: {{ postsindb.artist }}</p>-->
+            <img src="{{ postsindb.image.url }}" alt="Image">
+            <audio controls>
+                <source src="{{ postsindb.audio_file.url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>viewers : {{postsindb.viewer}}</p>
+        </div>
+        <div>
+            {% for i in postsindb.comments.all %}
+                <p>Comment by {{i.writer}} <br>{{i.comment_text}}</p>
+                <p>At {{i.created_at}}</p>
+            {% endfor %}
+
+        </div>
+        <h2>Add a Comment</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="article" value="{{ postsindb.id }}">  <!-- Hidden input for the article ID -->
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}
