@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+
+.btn-more {
+  background-color: #ff79c6 !important;
+  color: black;
+}
+.btn-more:hover {
+  color: black;
+}
+li {
+  list-style: none;
+}
+.box {
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+  height: 260px;
+  box-shadow: 5px 5px 20px rgb(41, 41, 41);
+}
+
+.card {
+  width: 200px;
+  height: 240px;
+  border: none;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+}
