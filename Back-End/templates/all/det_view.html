@@ -35,11 +35,11 @@
     <form method="post" class="border border-primary col-11 col-md-8 rounded-5 p-4 mx-auto mb-4">
         {% csrf_token %}
         <div class="form-floating my-3">
-            <input id="writer" type="text" class="w-100 form-control border-primary" style="outline: none; background-color: black;" placeholder="enter your name">
+            <input id="writer" name="writer" type="text" class="w-100 form-control border-primary" style="outline: none; background-color: black;" placeholder="enter your name">
             <label for="writer">name</label>
         </div>
         <div class="form-floating my-3">
-            <textarea id="Comment" class="w-100 form-control border-primary" style="outline: none; background-color: black;" placeholder="enter you comment"></textarea>
+            <textarea id="Comment" name="comment_text" class="w-100 form-control border-primary" style="outline: none; background-color: black;" placeholder="enter you comment"></textarea>
             <label for="Comment">your Comment</label>
         </div>
         <input type="hidden" name="article" value="{{ postsindb.id }}">
