@@ -160,3 +160,6 @@ body {
     display: none !important;
   }
 }
+.comments{
+  max-height: 250px;
+}

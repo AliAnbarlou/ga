@@ -3,7 +3,7 @@
   font-family: sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  cursor: url("https://i.stack.imgur.com/inwsy.png"), pointer;
+  /* cursor: url("https://i.stack.imgur.com/inwsy.png"), pointer; */
   transition: 0.5s;
 }
 *::selection {

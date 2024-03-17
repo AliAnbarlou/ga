@@ -1,6 +1,6 @@
 {% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
     <l-waveform size="150" stroke="7" speed="1.2" color="white"></l-waveform>
   </div>
   <!-- navbar -->
-  <header class="w-100 mt-2">
+  <header class="w-100 mt-2 bg-black" style="z-index: 999;">
     <nav
       class="d-flex flex-row justify-content-around w-100 align-items-center navbar navbar-expand-md"
     >
@@ -274,32 +274,9 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <!-- app.js -->
+    <script src="{% static 'js/app.js' %}"></script>
     <!--=============== MAIN JS ===============-->
     <script src="{% static 'js/main.js' %}"></script>
   </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-<html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--=============== REMIXICONS ===============-->
-    
-    <!-- icon -->
-    <link rel="icon" href="./img/Picsart_24-01-15_16-38-07-699.png  " />
-    <title>Msic Vibe</title>
-  </head>
-<body>
-  
 </html>
